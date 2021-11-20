@@ -7,7 +7,8 @@ import math
 def func(x):
     return [2*x[0], math.exp(x[1])]
 
-
+def alpha(x):
+    return 0.01
 
 
 def self_norm(g_i):
@@ -44,7 +45,7 @@ class CGD:
         x_i = x0 
         print("-----------------------------")
         print("x_{0} : ({1}, {2})".format(0, x_i[0], x_i[1]))
-
+    
         d_i = [-1 * self.gradf(x0)[0], -1 * self.gradf(x0)[1]]
         g_i_1 = self.gradf(x_i)
         g_i = g_i_1
@@ -53,7 +54,7 @@ class CGD:
         for i in range(n):
             print("-----------------------------")
 
-            x_i = add_vectors(1, x_i, self.alpha, d_i)
+            x_i = add_vectors(1, x_i, self.alpha(1), d_i)
             print("x_{0} : {1}".format(i+1, print_pair(x_i)))
 
             g_i_1 = g_i

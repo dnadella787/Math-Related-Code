@@ -1,4 +1,4 @@
-Code for gradient descent and Nesterov's acceleration (also called Nesterov's momentum/NAG) in 1D is here. Currently working on making it work for R^n :)
+Code for gradient descent and Nesterov's acceleration (also called Nesterov's momentum/NAG) in R^n here. 
 
 Similar to 1DLineSearch this uses classes with an iterate() function.
 
@@ -18,9 +18,9 @@ Similar to 1DLineSearch this uses classes with an iterate() function.
 
    The class can be initialized as:
 
-             N = Nesterov(x0, gf) 
+             N = Nesterov(x0, alpha, gf) 
 
-   where x0 is the initial guess and gf is the gradient function. You can call the iterate() function now:
+   where x0 is the initial guess, alpha is a constant, and gf is the gradient function. You can call the iterate() function now:
 
              N.iterate(n)
 
