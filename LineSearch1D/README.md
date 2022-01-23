@@ -62,3 +62,18 @@ Example functions and how to actually call them are included in each file. (for 
              N.iterate(x0,n)
 
    where x0 is the initial guess for the method and n is the number of iterations. Iterate will return the last x calculated within the given number of iterations.
+
+
+
+There is also a bisection.cpp which is meant for the command line. To use this simply do:
+
+   g++ bisection.cpp -o bisection
+   ./bisection -a=-2 -b=0 -n=4 --function="2*x+cos(2*x)"
+
+where a, b, n, and function are the left boundary, right boundary, number of intervals, and the function respectively. It also uses exprtk.hpp from this repo:
+
+   https://github.com/ArashPartow/exprtk
+
+which you will have to clone and then move exprtk.hpp into the same file. It is not a very flexible design right now but I am planning on producing my own math language parser soon when I have time which I can then release a big package. 
+
+   
