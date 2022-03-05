@@ -34,6 +34,7 @@ public:
 
 
         std::cout << std::endl << "Interval of Uncertainty : [" << a << ", " << b << "]" << std::endl;
+        std::cout << "Final Value : " << a + (b-a)/2 << std::endl;
         return a + (b-a)/2;
     }
 };
